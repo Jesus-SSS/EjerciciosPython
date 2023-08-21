@@ -1,0 +1,12 @@
+text=input('Ingresa el texto: ')    #Ingresamos el texto
+text=text.lower()                   #Pasa todo a minusculas
+text=text.replace(' ','')           #Reemplaza los espacios por no espacios (quita los espacios)
+ntext=''                            #Aqui guardaremos la cadena en orden inverso
+
+for ch in range(len(text),0,-1):    #range(lent(text),0,-1) indica que el numero mayor sera la longitud de la cadena, termina el conteo en 0, sera de manera decreciente
+    ntext+=text[(ch-1)]             #ch lo usaremos como indice para guardar cada elemento de la cadena, de atras a adelante
+                                    #recordemos que el indice puede ser entre el 0 y el numero de elementos -1
+if text==ntext:                     #comparamos el las cadenas text vs ntext
+    print('Palindromo')             #si son iguales es un palindromo
+else:
+    print('No es mijo')             #al ser false no es un palindromo
