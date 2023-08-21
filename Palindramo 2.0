@@ -1,0 +1,13 @@
+text=input('Ingresa el texto: ')                  #Ingreso del texto
+text=text.lower()                                 #Todo a minusculas
+text=text.replace(' ','')                         #Quita los espacios
+nt=len(text)                                      #Variable de la longitud de la cadena
+t=0                                               #Variable para suma de diferencia
+
+for ch in range(int(nt/2)):                       #Se usara un indice del inicio de la cadena hasta la mitad de esta, se compara
+    t+=ord(text[ch])-ord(text[(nt-1-ch)])         #numericamente el primer elemento con el ultimo, el segundo con el penultimo y
+                                                  #asi hasta que no quede ningun elemento o solo uno. Se suman las diferencias.
+if t==0:                                          #Si no hay diferencia q sumar, entonces t=0
+    print('Palindromo')                           #Al ser 0, es un Palindramo.
+else:
+    print('No es mijo')                           #Si hay una diferencia signifca que no es Palindramo
