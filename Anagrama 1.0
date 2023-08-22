@@ -1,0 +1,20 @@
+tx1=((input('1° texto: ').replace(" ",""))).lower()
+tx2=((input('2° texto: ').replace(" ",""))).lower()
+Ntx1=[]
+Ntx2=[]
+
+for ch in tx1:
+    Ntx1.append(ch)
+Ntx1.sort()
+    
+for ch in tx2:
+    Ntx2.append(ch)
+Ntx2.sort()
+    
+if Ntx1==Ntx2:
+    print('Anagrama')
+else:
+    print('No anagrama')
+    
+print(Ntx1)
+print(Ntx2)
