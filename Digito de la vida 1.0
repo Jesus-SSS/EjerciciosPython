@@ -4,4 +4,8 @@ num=0
 for ch in txt:
     num+=int(ch)
 
-print(num)
+xa=int(num/10)
+xb=(num%10)
+xsum=xa+xb
+
+print(xsum)
