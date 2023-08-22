@@ -1,0 +1,7 @@
+txt=input('Ingresa numero: ')
+num=0
+
+for ch in txt:
+    num+=int(ch)
+
+print(num)
