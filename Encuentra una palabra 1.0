@@ -1,0 +1,11 @@
+cdn1=input('Ingresa las letras a buscar: ')
+cdn2=input('Ingresa cadena que esconde: ')
+n=0
+
+for ch in cdn1:
+    if (cdn2.find(ch)) >=0:
+        n+=1
+if n == (len(cdn1)):
+    print('yes')
+else:
+    print('no')
