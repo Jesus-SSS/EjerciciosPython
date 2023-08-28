@@ -1,0 +1,21 @@
+sdk=input('Ingresa los datos: ')
+sdk=sdk.replace(' ','')
+print(sdk)
+
+k=0
+fls=''
+clms=[]
+print('-'*50)
+#Separar por filas de 9 elementos, 9 en total, guardarlos en una lista
+for fs in range(9):
+    for cs in range(9):
+        fls+=sdk[k]
+        k+=1
+    clms.append(fls)
+    fls=''
+print(clms)
+
+#Ejemplo de extraccion de columuna numero 9 (indice 8 porque empieza en 0)
+for i in range(9):
+    fls+=clms[i][8]
+print(fls)
