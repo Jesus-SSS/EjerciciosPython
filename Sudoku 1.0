@@ -3,19 +3,27 @@ sdk=sdk.replace(' ','')
 print(sdk)
 
 k=0
-fls=''
+fls=[]
 clms=[]
 print('-'*50)
 #Separar por filas de 9 elementos, 9 en total, guardarlos en una lista
 for fs in range(9):
     for cs in range(9):
-        fls+=sdk[k]
+        fls.append(sdk[k])
         k+=1
-    clms.append(fls)
-    fls=''
-print(clms)
+    #clms.append(fls)
+    fls.sort()
+    print(fls)
+    fls.clear()
+    
+print('/'*50)
+k=0
 
-#Ejemplo de extraccion de columuna numero 9 (indice 8 porque empieza en 0)
-for i in range(9):
-    fls+=clms[i][8]
-print(fls)
+for fs in range(9):
+    k=fs
+    for cs in range(9):
+        fls.append(sdk[k])
+        k+=9
+    fls.sort()
+    print(fls)
+    fls.clear()
