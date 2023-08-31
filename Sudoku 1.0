@@ -27,3 +27,16 @@ for fs in range(9):
     fls.sort()
     print(fls)
     fls.clear()
+
+print('#'*50)
+ 
+ax1=[0,1,2,9,10,11,18,19,20]
+ax2=[0,3,6,27,30,33,54,57,60] #[0,66,33,27,3,69,63,30,6]
+
+for n2 in ax2:
+    for n1 in ax1:
+        fls.append(sdk[n1+n2])
+        
+    fls.sort()
+    print(fls)
+    fls.clear()
