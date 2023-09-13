@@ -1,0 +1,19 @@
+def read_int(prompt, min, max):
+    p=input(prompt)
+    try:
+        p=int(p)
+        val=p
+        print('todo chido')
+        assert not(p<-10 or p>10)
+    except AssertionError:
+        print('Ingresa un numero dentro del rango')
+        val="Ta fuera"
+    except ValueError:
+        print('Ingresa un numero')
+        val='Ah te mmst'
+    return(val)
+
+
+v = read_int("Ingresa un número entre -10 a 10: ", -10, 10)
+
+print("El número es:", v)
