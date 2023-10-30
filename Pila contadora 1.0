@@ -17,7 +17,7 @@ class CountingStack(Stack):
         self.__counter=0
 
     def get_counter(self):
-        return (self.__counter)
+        return self.__counter
         
     def pop(self):
         self.__counter+=1
