@@ -1,0 +1,38 @@
+class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    def __init__(self):
+        self.qe = []
+        self.ctr = 0
+    def put(self,elem):
+        self.qe.insert(0,elem)
+        self.ctr+=1
+    def get(self):
+        if len(self.qe) > 0:
+            elem = self.qe[-1]
+            del self.qe[-1]
+            self.ctr-=1
+            return elem
+        else:
+            raise QueueError
+
+
+class SuperQueue(Queue):
+    def isempty(self):
+        return len(self.qe) == 0
+    def prueba(self):
+        e=self.ctr
+        return e
+
+que = SuperQueue()
+que.put(10)
+que.put("perro")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+        print(que.prueba())
+    else:
+        print("Cola vacía")
