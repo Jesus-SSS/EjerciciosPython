@@ -1,0 +1,56 @@
+class Timer:
+  def __init__(self, hr, mm, ss):
+    self.hr=hr
+    self.mm=mm
+    self.ss=ss
+
+
+  def __str__(self):
+    if self.hr<10:
+      self.a='0'+str(self.hr)
+    else:
+      self.a=str(self.hr)
+
+    if self.mm<10:
+      self.b='0'+str(self.mm)
+    else:
+      self.b=str(self.mm)
+
+    if self.ss<10:
+      self.c='0'+str(self.ss)
+    else:
+      self.c=str(self.ss)
+
+    print(self.a+":"+self.b+":"+self.c)
+
+
+  def next_second(self):
+    self.ss+=1
+    if self.ss>59:
+      self.ss=0
+      self.mm+=1
+    if self.mm>59:
+      self.mm=0
+      self.hr+=1
+    if self.hr>23:
+      self.hr=0
+
+  def prev_second(self):
+    self.ss-=1
+    if self.ss<0:
+      self.ss=59
+      self.mm-=1
+    if self.mm<0:
+      self.mm=59
+      self.hr-=1
+    if self.hr<0:
+      self.hr=23
+
+
+timer = Timer(23, 00, 00)
+timer.__str__()
+timer.next_second()
+timer.__str__()
+timer.prev_second()
+timer.prev_second()
+timer.__str__()
